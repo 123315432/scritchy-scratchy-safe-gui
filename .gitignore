@@ -40,3 +40,5 @@ analysis/*
 !analysis/gui_validation_2026-04-25.md
 !analysis/gui_integration_2026-04-25.md
 !analysis/progress_index_2026-04-25.md
+!analysis/gui_pipe_input_hardening_2026-04-26.md
+!analysis/scratchbot_base_runtime_2026-04-26.md

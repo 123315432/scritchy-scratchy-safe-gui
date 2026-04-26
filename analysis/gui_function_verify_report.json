@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-26 09:21:12",
+  "timestamp": "2026-04-26 10:28:56",
   "ok": true,
   "passed": 36,
   "failed": 0,
@@ -11,7 +11,7 @@
     {
       "name": "runtime_status",
       "ok": true,
-      "duration_sec": 9.514,
+      "duration_sec": 10.607,
       "summary": "存档: saveData=0x2C444A46700 layerOne=0x2C4386D7630 prestige=99 prestigeCurrency=999999 act=5 tokens=999999999.0 | 资源: money=1e+40 souls=999999 machineTier=5 machineFeed=0 | 刮卡: PlayerScratching=0x2C444A469A0 tool=0x2C441073370 currentTicket=0x0 checks=10 luck=45 luckReduction=0",
       "raw": "true :: true :: 存档: saveData=0x2C444A46700 layerOne=0x2C4386D7630 prestige=99 prestigeCurrency=999999 act=5 tokens=999999999.0\n资源: money=1e+40 souls=999999 machineTier=5 machineFeed=0\n刮卡: PlayerScratching=0x2C444A469A0 tool=0x2C441073370 currentTicket=0x0 checks=10 luck=45 luckReduction=0\n工具: strength=16 sizeBacking=0 sizeReduction=0\n当前票: nil\n超级头奖: manager=0x2C444A46A80 isActive=false superTicket=0x0",
       "error": ""
@@ -19,7 +19,7 @@
     {
       "name": "dump",
       "ok": true,
-      "duration_sec": 10.553,
+      "duration_sec": 18.67,
       "summary": "GameAssembly=0x7FFE909D0000 | SaveData=0x2C444A46700 source=mono_static | LayerOne=[SaveData+30]=0x2C4386D7630 | SaveData fields prestige=99 currency=999999 act=5 tokens=999999999.0",
       "raw": "true :: true :: GameAssembly=0x7FFE909D0000\nSaveData=0x2C444A46700 source=mono_static\nLayerOne=[SaveData+30]=0x2C4386D7630\nSaveData fields prestige=99 currency=999999 act=5 tokens=999999999.0\nLayerOne ptrs ticketProgressionDict=0x2C46BB2D360 jackpotsGotten=0x2C46BB5CBA0 superJackpotsGotten=0x2C46BB5CB70 claimedItems=0x2C46BB5CB40\nPerkManager callsite=0x7FFE90E7E723 slot=0x7FFE93F46C38 genericCtx=0x2C2517D5100 ptr=0x2C44015CF00 err=nil\n  activePerks=[+28]=0x2C438661200 symbols=[+30]=0x2C4386E3E20\nDebugTools callsite=0x7FFE90E6361D slot=0x7FFE93F45E08 genericCtx=0x2C251822FA0 ptr=0x2C43869B2C0 err=nil\nSuperJackpotManager mono count=1 ptr=0x2C444A46A80\nTicketShop mono count=1 ptr=0x2C441128F50\nPrestigeManager mono count=1 ptr=0x2C440FD8F80\nPlayerScratching mono count=1 ptr=0x2C444A469A0\nPlayerWallet mono count=1 ptr=0x2C4410733C0\nTicketProgressionManager mono count=1 ptr=0x2C443C36450",
       "error": ""
@@ -27,7 +27,7 @@
     {
       "name": "dump_perks",
       "ok": true,
-      "duration_sec": 9.225,
+      "duration_sec": 12.936,
       "summary": "PerkManager=0x2C440FA06C0 activePerks=0x2C440FA1CC0 entries=0x2C46BD12000 count=35 version=-1 capacity=37 | type\tentry\tkey\ttuple\titem2\tperkData\tperkId\tperkType\tperkCount\tperkValue | 27\t0\t27\t0x2C46BD1CBA0\t10\t0x2C440307740\tMuscle Memory\t27\t1\t25.0 | 20\t1\t20\t0x2C46BD1CB70\t10\t0x2C440307F00\tNight Market\t20\t1\t0.0",
       "raw": "true :: true :: PerkManager=0x2C440FA06C0 activePerks=0x2C440FA1CC0 entries=0x2C46BD12000 count=35 version=-1 capacity=37\ntype\tentry\tkey\ttuple\titem2\tperkData\tperkId\tperkType\tperkCount\tperkValue\n27\t0\t27\t0x2C46BD1CBA0\t10\t0x2C440307740\tMuscle Memory\t27\t1\t25.0\n20\t1\t20\t0x2C46BD1CB70\t10\t0x2C440307F00\tNight Market\t20\t1\t0.0\n31\t2\t31\t0x2C46BD1CB40\t10\t0x2C440307700\tAllowance\t31\t1\t100.0\n24\t3\t24\t0x2C46BD1CB10\t10\t0x2C440307E80\tJackpot Power\t24\t5\t1.0\n16\t4\t16\t0x2C46BD1CAE0\t10\t0x2C440307CC0\tBig Winner\t16\t7\t15.0\n42\t5\t42\t0x2C46BD1CAB0\t10\t0x2C440307A40\tShopping Spree\t42\t1\t0.0\n23\t6\t23\t0x2C46BD1CA80\t10\t0x2C440307E40\tTool Belt\t23\t5\t1.0\n8\t7\t8\t0x2C46BD1CA50\t10\t0x2C440307EC0\tStarter Kit\t8\t1\t0.0\n21\t8\t21\t0x2C46BD1CA20\t10\t0x2C440307DC0\tBooster Kit\t21\t5\t1.0\n32\t9\t32\t0x2C46BD1C9F0\t10\t0x2C440307C40\tElectric Fan\t32\t1\t0.0\n25\t10\t25\t0x2C46BD1C9C0\t10\t0x2C440307D00\tIgnorance is Bliss\t25\t5\t10.0\n45\t11\t45\t0x2C46BD1C990\t10\t0x2C4403076C0\tSuper Lucky\t45\t1\t0.0\n3\t12\t3\t0x2C46BD1C960\t10\t0x2C440307C00\tClean Freak\t3\t10\t20.0\n7\t13\t7\t0x2C46BD1C930\t10\t0x2C440307E00\tSelf Made Millionaire\t7\t10\t20.0\n28\t14\t28\t0x2C46BD1C900\t10\t0x2C440307B80\tLearn by Doing\t28\t5\t3.0\n33\t15\t33\t0x2C46BD1C8D0\t10\t0x2C440307B40\tAir Condition\t33\t1\t0.0\n13\t16\t13\t0x2C46BD1C8A0\t10\t0x2C440307C80\tCompletionist\t13\t5\t20.0\n37\t17\t37\t0x2C46BD1C870\t10\t0x2C440307AC0\tDishwasher\t37\t1\t0.0\n0\t18\t0\t0x2C46BD1C840\t10\t0x2C440307D80\tRecycling\t0\t5\t3.0\n15\t19\t15\t0x2C46BD1C810\t10\t0x2C440307BC0\tSmart Investment\t15\t5\t10.0\n22\t20\t22\t0x2C46BD1C7E0\t10\t0x2C440307D40\tLess is More\t22\t10\t30.0\n44\t21\t44\t0x2C46BD1C7B0\t10\t0x2C440307A00\tRefund\t44\t10\t5.0\n30\t22\t30\t0x2C46BD1C780\t10\t0x2C440307900\tExperienced\t30\t5\t10.0\n41\t23\t41\t0x2C46BD1C750\t10\t0x2C440307A80\tMagic\t41\t1\t0.0\n2\t24\t2\t0x2C46BD1C720\t10\t0x2C4403079C0\tSoft Hands\t2\t5\t20.0\n34\t25\t34\t0x2C46BD1C6F0\t10\t0x2C440307B00\tPet Lover\t34\t1\t0.0\n38\t26\t38\t0x2C46BD1C6C0\t10\t0x2C440307840\tFine Dining\t38\t1\t0.0\n46\t27\t46\t0x2C46BD1C690\t10\t0x2C440307680\tTime Travel\t46\t1\t0.0\n35\t28\t35\t0x2C46BD1C660\t10\t0x2C4403078C0\tPicky Eater\t35\t1\t0.0\n36\t29\t36\t0x2C46BD1C630\t10\t0x2C440307880\tFully Automated\t36\t1\t0.0\n43\t30\t43\t0x2C46BD1C600\t10\t0x2C4403077C0\tHotkeys\t43\t1\t0.0\n29\t31\t29\t0x2C46BD1C5D0\t10\t0x2C440307940\tLoan Shark\t29\t1\t0.0\n18\t32\t18\t0x2C46BD1C5A0\t10\t0x2C440307980\tCollector\t18\t10\t5.0\n40\t33\t40\t0x2C46BD1C570\t10\t0x2C440307800\tBuilt Different\t40\t5\t15.0\n47\t34\t47\t0x2C46BD1C540\t10\t0x2C440307780\tPlateMaster5000\t47\t1\t2.0\nvalid=35",
       "error": ""
@@ -35,7 +35,7 @@
     {
       "name": "custom_save_fields_restore",
       "ok": true,
-      "duration_sec": 15.323,
+      "duration_sec": 25.331,
       "summary": "custom save restore ok1=true ok2=true source=mono_static money 1e+40 -> 12345.5 -> 1e+40 tokens 1e+09 -> 123456 -> 1e+09 souls 999999 -> 1234 -> 999999 prestigeCurrency 999999 -> 2345 -> 999999 prestigeCount 99 -> 12 -> 99 act 5 -> 3 -> 5 changed=true restored=true | money 1e+40 -> 12345.5 | tokens 999999999.0 -> 123456.0 | souls 999999 -> 1234",
       "raw": "custom save restore ok1=true ok2=true source=mono_static money 1e+40 -> 12345.5 -> 1e+40 tokens 1e+09 -> 123456 -> 1e+09 souls 999999 -> 1234 -> 999999 prestigeCurrency 999999 -> 2345 -> 999999 prestigeCount 99 -> 12 -> 99 act 5 -> 3 -> 5 changed=true restored=true\nAPPLY true :: custom save fields saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630\nmoney 1e+40 -> 12345.5\ntokens 999999999.0 -> 123456.0\nsouls 999999 -> 1234\nprestigeCurrency 999999 -> 2345\nprestigeCount 99 -> 12\ncurrentAct 5 -> 3\nRESTORE true :: custom save fields saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630\nmoney 12345.5 -> 1e+40\ntokens 123456.0 -> 999999999.0\nsouls 1234 -> 999999\nprestigeCurrency 2345 -> 999999\nprestigeCount 12 -> 99\ncurrentAct 3 -> 5",
       "error": ""
@@ -43,7 +43,7 @@
     {
       "name": "scratch_status",
       "ok": true,
-      "duration_sec": 9.083,
+      "duration_sec": 10.763,
       "summary": "scratchParticleSpeed=25.0 -> 25.0 | mouseVelocityMax=0.20000000298023 -> 0.20000000298023 | scratchChecksPerSecond=10 -> 10 | scratchLuck=45 -> 45",
       "raw": "true :: true :: scratch runtime scratching=0x2C444A469A0 source=mono_instance tool=0x2C441073370 mode=status\nscratchParticleSpeed=25.0 -> 25.0\nmouseVelocityMax=0.20000000298023 -> 0.20000000298023\nscratchChecksPerSecond=10 -> 10\nscratchLuck=45 -> 45\nluckReduction=0 -> 0\ntoolStrength=16 -> 16\ntoolSizeBacking=0 -> 0\ntoolSizeReduction=0 -> 0",
       "error": ""
@@ -51,7 +51,7 @@
     {
       "name": "scratch_runtime_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.633,
+      "duration_sec": 25.192,
       "summary": "scratch runtime restore ok1=true ok2=true source=mono_instance fields=8 scratchParticleSpeed 25.0 -> 26.0 -> 25.0 | mouseVelocityMax 0.20000000298023 -> 1.2000000476837 -> 0.20000000298023 | scratchChecksPerSecond 10 -> 11 -> 10 | scratchLuck 45 -> 46 -> 45 | luckReduction 0 -> 1 -> 0 | toolStrength 16 -> 17 -> 16 | toolSizeBacking 0 -> 1 -> 0 | toolSizeReduction 0 -> 1 -> 0 changed=true restored=true | scratchParticleSpeed=25.0 -> 26.0 | mouseVelocityMax=0.20000000298023 -> 1.2000000476837 | scratchChecksPerSecond=10 -> 11",
       "raw": "scratch runtime restore ok1=true ok2=true source=mono_instance fields=8 scratchParticleSpeed 25.0 -> 26.0 -> 25.0 | mouseVelocityMax 0.20000000298023 -> 1.2000000476837 -> 0.20000000298023 | scratchChecksPerSecond 10 -> 11 -> 10 | scratchLuck 45 -> 46 -> 45 | luckReduction 0 -> 1 -> 0 | toolStrength 16 -> 17 -> 16 | toolSizeBacking 0 -> 1 -> 0 | toolSizeReduction 0 -> 1 -> 0 changed=true restored=true\nAPPLY true :: scratch runtime scratching=0x2C444A469A0 source=mono_instance tool=0x2C441073370 mode=apply\nscratchParticleSpeed=25.0 -> 26.0\nmouseVelocityMax=0.20000000298023 -> 1.2000000476837\nscratchChecksPerSecond=10 -> 11\nscratchLuck=45 -> 46\nluckReduction=0 -> 1\ntoolStrength=16 -> 17\ntoolSizeBacking=0 -> 1\ntoolSizeReduction=0 -> 1\nRESTORE true :: scratch runtime scratching=0x2C444A469A0 source=mono_instance tool=0x2C441073370 mode=apply\nscratchParticleSpeed=26.0 -> 25.0\nmouseVelocityMax=1.2000000476837 -> 0.20000000298023\nscratchChecksPerSecond=11 -> 10\nscratchLuck=46 -> 45\nluckReduction=1 -> 0\ntoolStrength=17 -> 16\ntoolSizeBacking=1 -> 0\ntoolSizeReduction=1 -> 0",
       "error": ""
@@ -59,7 +59,7 @@
     {
       "name": "bot_upgrade_status",
       "ok": true,
-      "duration_sec": 9.764,
+      "duration_sec": 16.741,
       "summary": "Scratch Bot 1 -> 1 max=1 val=0x2C46BBE4C90 | Scratch Bot Speed 30 -> 30 max=30 val=0x2C46BBE4BA0 | Scratch Bot Capacity 10 -> 10 max=10 val=0x2C46BBE4AB0 | Scratch Bot Strength 20 -> 20 max=20 val=0x2C46BBE49C0",
       "raw": "true :: true :: bot upgrades saveData=0x2C444A46700 source=mono_static layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=status\nScratch Bot 1 -> 1 max=1 val=0x2C46BBE4C90\nScratch Bot Speed 30 -> 30 max=30 val=0x2C46BBE4BA0\nScratch Bot Capacity 10 -> 10 max=10 val=0x2C46BBE4AB0\nScratch Bot Strength 20 -> 20 max=20 val=0x2C46BBE49C0",
       "error": ""
@@ -67,7 +67,7 @@
     {
       "name": "bot_upgrade_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.715,
+      "duration_sec": 27.264,
       "summary": "upgrade restore action=bot_upgrade_apply source=mono_static Scratch Bot 1 -> 0 -> 1 | Scratch Bot Speed 30 -> 29 -> 30 | Scratch Bot Capacity 10 -> 9 -> 10 | Scratch Bot Strength 20 -> 19 -> 20 changed=true restored=true | Scratch Bot 1 -> 0 max=1 val=0x2C46BBE4C90 | Scratch Bot Speed 30 -> 29 max=30 val=0x2C46BBE4BA0 | Scratch Bot Capacity 10 -> 9 max=10 val=0x2C46BBE4AB0",
       "raw": "upgrade restore action=bot_upgrade_apply source=mono_static Scratch Bot 1 -> 0 -> 1 | Scratch Bot Speed 30 -> 29 -> 30 | Scratch Bot Capacity 10 -> 9 -> 10 | Scratch Bot Strength 20 -> 19 -> 20 changed=true restored=true\nAPPLY true :: bot upgrades saveData=0x2C444A46700 source=mono_static layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=apply\nScratch Bot 1 -> 0 max=1 val=0x2C46BBE4C90\nScratch Bot Speed 30 -> 29 max=30 val=0x2C46BBE4BA0\nScratch Bot Capacity 10 -> 9 max=10 val=0x2C46BBE4AB0\nScratch Bot Strength 20 -> 19 max=20 val=0x2C46BBE49C0\nRESTORE true :: bot upgrades saveData=0x2C444A46700 source=mono_static layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=apply\nScratch Bot 0 -> 1 max=1 val=0x2C46BBE4C90\nScratch Bot Speed 29 -> 30 max=30 val=0x2C46BBE4BA0\nScratch Bot Capacity 9 -> 10 max=10 val=0x2C46BBE4AB0\nScratch Bot Strength 19 -> 20 max=20 val=0x2C46BBE49C0",
       "error": ""
@@ -75,7 +75,7 @@
     {
       "name": "subscription_bot_status",
       "ok": true,
-      "duration_sec": 9.635,
+      "duration_sec": 10.848,
       "summary": "Subscription Bot 1 -> 1 max=1 val=0x2C46BBE4060 | Buying Speed 10 -> 10 max=10 val=0x2C46BBE6F60",
       "raw": "true :: true :: subscription bot upgrades saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=status max_source=analysis/UpgradeData.json\nSubscription Bot 1 -> 1 max=1 val=0x2C46BBE4060\nBuying Speed 10 -> 10 max=10 val=0x2C46BBE6F60",
       "error": ""
@@ -83,7 +83,7 @@
     {
       "name": "subscription_bot_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.192,
+      "duration_sec": 22.123,
       "summary": "upgrade restore action=subscription_bot_apply source=mono_static Subscription Bot 1 -> 0 -> 1 | Buying Speed 10 -> 9 -> 10 changed=true restored=true | Subscription Bot 1 -> 0 max=1 val=0x2C46BBE4060 | Buying Speed 10 -> 9 max=10 val=0x2C46BBE6F60 | Subscription Bot 0 -> 1 max=1 val=0x2C46BBE4060",
       "raw": "upgrade restore action=subscription_bot_apply source=mono_static Subscription Bot 1 -> 0 -> 1 | Buying Speed 10 -> 9 -> 10 changed=true restored=true\nAPPLY true :: subscription bot upgrades saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=apply max_source=analysis/UpgradeData.json\nSubscription Bot 1 -> 0 max=1 val=0x2C46BBE4060\nBuying Speed 10 -> 9 max=10 val=0x2C46BBE6F60\nRESTORE true :: subscription bot upgrades saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=apply max_source=analysis/UpgradeData.json\nSubscription Bot 0 -> 1 max=1 val=0x2C46BBE4060\nBuying Speed 9 -> 10 max=10 val=0x2C46BBE6F60",
       "error": ""
@@ -91,7 +91,7 @@
     {
       "name": "subscription_runtime_status",
       "ok": true,
-      "duration_sec": 9.612,
+      "duration_sec": 15.084,
       "summary": "processingDuration=3.0 -> 3.0 | maxTicketCount=200 -> 200 | paused=true -> true elapsedTime=0.0 | ProcessingSpeedMult=6.0 -> 6.0",
       "raw": "true :: true :: subscription runtime bot=0x2C440FCE9A0 source=cache mode=status\nprocessingDuration=3.0 -> 3.0\nmaxTicketCount=200 -> 200\npaused=true -> true elapsedTime=0.0\ncurrentTicket=0x0 id=nil\nProcessingSpeedMult=6.0 -> 6.0",
       "error": ""
@@ -99,7 +99,7 @@
     {
       "name": "subscription_runtime_write_restore",
       "ok": true,
-      "duration_sec": 3.91,
+      "duration_sec": 3.811,
       "summary": "subscription runtime restore bot=0x2C440FCE9A0 source=cache processingDuration 3 -> 3.25 -> 3 maxTicketCount 200 -> 201 -> 200 paused 1 -> 0 -> 1 ProcessingSpeedMult 6 -> 7 -> 6 changed=true restored=true",
       "raw": "subscription runtime restore bot=0x2C440FCE9A0 source=cache processingDuration 3 -> 3.25 -> 3 maxTicketCount 200 -> 201 -> 200 paused 1 -> 0 -> 1 ProcessingSpeedMult 6 -> 7 -> 6 changed=true restored=true",
       "error": ""
@@ -107,7 +107,7 @@
     {
       "name": "subscription_runtime_dispatcher_restore",
       "ok": true,
-      "duration_sec": 16.117,
+      "duration_sec": 21.859,
       "summary": "dispatcher_restore ok1=true ok2=true source=cache processingDuration 3 -> 3.25 -> 3 maxTicketCount 200 -> 201 -> 200 paused 1 -> 0 -> 1 ProcessingSpeedMult 6 -> 7 -> 6 changed=true restored=true | processingDuration=3.0 -> 3.25 | maxTicketCount=200 -> 201 | paused=true -> false elapsedTime=0.0",
       "raw": "dispatcher_restore ok1=true ok2=true source=cache processingDuration 3 -> 3.25 -> 3 maxTicketCount 200 -> 201 -> 200 paused 1 -> 0 -> 1 ProcessingSpeedMult 6 -> 7 -> 6 changed=true restored=true\nAPPLY true :: subscription runtime bot=0x2C440FCE9A0 source=cache mode=apply\nprocessingDuration=3.0 -> 3.25\nmaxTicketCount=200 -> 201\npaused=true -> false elapsedTime=0.0\ncurrentTicket=0x0 id=nil\nProcessingSpeedMult=6.0 -> 7.0\nRESTORE true :: subscription runtime bot=0x2C440FCE9A0 source=cache mode=apply\nprocessingDuration=3.25 -> 3.0\nmaxTicketCount=201 -> 200\npaused=true -> true elapsedTime=0.0\ncurrentTicket=0x0 id=nil\nProcessingSpeedMult=7.0 -> 6.0",
       "error": ""
@@ -115,23 +115,23 @@
     {
       "name": "gadget_runtime_status",
       "ok": true,
-      "duration_sec": 9.141,
+      "duration_sec": 13.987,
       "summary": "EggTimer.BatteryCapacityMult=6.0 -> 6.0 ptr=0x2C440FD8D00 source=cache | EggTimer.BatteryChargeMult=6.0 -> 6.0 ptr=0x2C440FD8D00 source=cache | EggTimer.MultMultiplier=2.5 -> 2.5 ptr=0x2C440FD8D00 source=cache | Fan.BatteryCapacityMult=32.0 -> 32.0 ptr=0x2C440FCD360 source=cache",
-      "raw": "true :: true :: gadget runtime mode=status\nEggTimer.BatteryCapacityMult=6.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.BatteryChargeMult=6.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.MultMultiplier=2.5 -> 2.5 ptr=0x2C440FD8D00 source=cache\nFan.BatteryCapacityMult=32.0 -> 32.0 ptr=0x2C440FCD360 source=cache\nFan.BatteryChargeMult=1.0 -> 1.0 ptr=0x2C440FCD360 source=cache\nFan.SpeedMult=3.5 -> 3.5 ptr=0x2C440FCD360 source=cache\nMundo.ClaimSpeedMult=6.0 -> 6.0 ptr=0x2C444BB55B0 source=cache\nScratchBot.speedMult=16.0 -> 16.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraSpeed=0.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraCapacity=0.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraStrength=1 -> 1 ptr=0x2C444B0C2D0 source=cache\nSpellBook.RechargeSpeedMult=6.0 -> 6.0 ptr=0x2C440EC1690 source=cache\nOK touchedFields=0",
+      "raw": "true :: true :: gadget runtime mode=status\nEggTimer.BatteryCapacityMult=6.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.BatteryChargeMult=6.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.MultMultiplier=2.5 -> 2.5 ptr=0x2C440FD8D00 source=cache\nFan.BatteryCapacityMult=32.0 -> 32.0 ptr=0x2C440FCD360 source=cache\nFan.BatteryChargeMult=1.0 -> 1.0 ptr=0x2C440FCD360 source=cache\nFan.SpeedMult=3.5 -> 3.5 ptr=0x2C440FCD360 source=cache\nMundo.ClaimSpeedMult=6.0 -> 6.0 ptr=0x2C444BB55B0 source=cache\nScratchBot.capacity=33 -> 33 ptr=0x2C444B0C2D0 source=cache\nScratchBot.strength=20 -> 20 ptr=0x2C444B0C2D0 source=cache\nScratchBot.speedMult=16.0 -> 16.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraSpeed=0.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraCapacity=0.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraStrength=1 -> 1 ptr=0x2C444B0C2D0 source=cache\nSpellBook.RechargeSpeedMult=6.0 -> 6.0 ptr=0x2C440EC1690 source=cache\nOK touchedFields=0",
       "error": ""
     },
     {
       "name": "gadget_runtime_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.734,
-      "summary": "gadget runtime restore fields=12 EggTimer.BatteryCapacityMult 6.0 -> 7.0 -> 6.0 | EggTimer.BatteryChargeMult 6.0 -> 7.0 -> 6.0 | EggTimer.MultMultiplier 2.5 -> 3.5 -> 2.5 | Fan.BatteryCapacityMult 32.0 -> 33.0 -> 32.0 | Fan.BatteryChargeMult 1.0 -> 2.0 -> 1.0 | Fan.SpeedMult 3.5 -> 4.5 -> 3.5 | Mundo.ClaimSpeedMult 6.0 -> 7.0 -> 6.0 | ScratchBot.speedMult 16.0 -> 17.0 -> 16.0 | ScratchBot.extraSpeed 0.0 -> 1.0 -> 0.0 | ScratchBot.extraCapacity 0.0 -> 1.0 -> 0.0 | ScratchBot.extraStrength 1 -> 2 -> 1 | SpellBook.RechargeSpeedMult 6.0 -> 7.0 -> 6.0 changed=true restored=true | EggTimer.BatteryCapacityMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache | EggTimer.BatteryChargeMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache | EggTimer.MultMultiplier=2.5 -> 3.5 ptr=0x2C440FD8D00 source=cache",
-      "raw": "gadget runtime restore fields=12 EggTimer.BatteryCapacityMult 6.0 -> 7.0 -> 6.0 | EggTimer.BatteryChargeMult 6.0 -> 7.0 -> 6.0 | EggTimer.MultMultiplier 2.5 -> 3.5 -> 2.5 | Fan.BatteryCapacityMult 32.0 -> 33.0 -> 32.0 | Fan.BatteryChargeMult 1.0 -> 2.0 -> 1.0 | Fan.SpeedMult 3.5 -> 4.5 -> 3.5 | Mundo.ClaimSpeedMult 6.0 -> 7.0 -> 6.0 | ScratchBot.speedMult 16.0 -> 17.0 -> 16.0 | ScratchBot.extraSpeed 0.0 -> 1.0 -> 0.0 | ScratchBot.extraCapacity 0.0 -> 1.0 -> 0.0 | ScratchBot.extraStrength 1 -> 2 -> 1 | SpellBook.RechargeSpeedMult 6.0 -> 7.0 -> 6.0 changed=true restored=true\nAPPLY true :: gadget runtime mode=apply\nEggTimer.BatteryCapacityMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.BatteryChargeMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.MultMultiplier=2.5 -> 3.5 ptr=0x2C440FD8D00 source=cache\nFan.BatteryCapacityMult=32.0 -> 33.0 ptr=0x2C440FCD360 source=cache\nFan.BatteryChargeMult=1.0 -> 2.0 ptr=0x2C440FCD360 source=cache\nFan.SpeedMult=3.5 -> 4.5 ptr=0x2C440FCD360 source=cache\nMundo.ClaimSpeedMult=6.0 -> 7.0 ptr=0x2C444BB55B0 source=cache\nScratchBot.speedMult=16.0 -> 17.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraSpeed=0.0 -> 1.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraCapacity=0.0 -> 1.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraStrength=1 -> 2 ptr=0x2C444B0C2D0 source=cache\nSpellBook.RechargeSpeedMult=6.0 -> 7.0 ptr=0x2C440EC1690 source=cache\nOK touchedFields=12\nRESTORE true :: gadget runtime mode=apply\nEggTimer.BatteryCapacityMult=7.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.BatteryChargeMult=7.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.MultMultiplier=3.5 -> 2.5 ptr=0x2C440FD8D00 source=cache\nFan.BatteryCapacityMult=33.0 -> 32.0 ptr=0x2C440FCD360 source=cache\nFan.BatteryChargeMult=2.0 -> 1.0 ptr=0x2C440FCD360 source=cache\nFan.SpeedMult=4.5 -> 3.5 ptr=0x2C440FCD360 source=cache\nMundo.ClaimSpeedMult=7.0 -> 6.0 ptr=0x2C444BB55B0 source=cache\nScratchBot.speedMult=17.0 -> 16.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraSpeed=1.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraCapacity=1.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraStrength=2 -> 1 ptr=0x2C444B0C2D0 source=cache\nSpellBook.RechargeSpeedMult=7.0 -> 6.0 ptr=0x2C440EC1690 source=cache\nOK touchedFields=12",
+      "duration_sec": 27.675,
+      "summary": "gadget runtime restore fields=14 EggTimer.BatteryCapacityMult 6.0 -> 7.0 -> 6.0 | EggTimer.BatteryChargeMult 6.0 -> 7.0 -> 6.0 | EggTimer.MultMultiplier 2.5 -> 3.5 -> 2.5 | Fan.BatteryCapacityMult 32.0 -> 33.0 -> 32.0 | Fan.BatteryChargeMult 1.0 -> 2.0 -> 1.0 | Fan.SpeedMult 3.5 -> 4.5 -> 3.5 | Mundo.ClaimSpeedMult 6.0 -> 7.0 -> 6.0 | ScratchBot.capacity 33 -> 34 -> 33 | ScratchBot.strength 20 -> 21 -> 20 | ScratchBot.speedMult 16.0 -> 17.0 -> 16.0 | ScratchBot.extraSpeed 0.0 -> 1.0 -> 0.0 | ScratchBot.extraCapacity 0.0 -> 1.0 -> 0.0 | ScratchBot.extraStrength 1 -> 2 -> 1 | SpellBook.RechargeSpeedMult 6.0 -> 7.0 -> 6.0 changed=true restored=true | EggTimer.BatteryCapacityMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache | EggTimer.BatteryChargeMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache | EggTimer.MultMultiplier=2.5 -> 3.5 ptr=0x2C440FD8D00 source=cache",
+      "raw": "gadget runtime restore fields=14 EggTimer.BatteryCapacityMult 6.0 -> 7.0 -> 6.0 | EggTimer.BatteryChargeMult 6.0 -> 7.0 -> 6.0 | EggTimer.MultMultiplier 2.5 -> 3.5 -> 2.5 | Fan.BatteryCapacityMult 32.0 -> 33.0 -> 32.0 | Fan.BatteryChargeMult 1.0 -> 2.0 -> 1.0 | Fan.SpeedMult 3.5 -> 4.5 -> 3.5 | Mundo.ClaimSpeedMult 6.0 -> 7.0 -> 6.0 | ScratchBot.capacity 33 -> 34 -> 33 | ScratchBot.strength 20 -> 21 -> 20 | ScratchBot.speedMult 16.0 -> 17.0 -> 16.0 | ScratchBot.extraSpeed 0.0 -> 1.0 -> 0.0 | ScratchBot.extraCapacity 0.0 -> 1.0 -> 0.0 | ScratchBot.extraStrength 1 -> 2 -> 1 | SpellBook.RechargeSpeedMult 6.0 -> 7.0 -> 6.0 changed=true restored=true\nAPPLY true :: gadget runtime mode=apply\nEggTimer.BatteryCapacityMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.BatteryChargeMult=6.0 -> 7.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.MultMultiplier=2.5 -> 3.5 ptr=0x2C440FD8D00 source=cache\nFan.BatteryCapacityMult=32.0 -> 33.0 ptr=0x2C440FCD360 source=cache\nFan.BatteryChargeMult=1.0 -> 2.0 ptr=0x2C440FCD360 source=cache\nFan.SpeedMult=3.5 -> 4.5 ptr=0x2C440FCD360 source=cache\nMundo.ClaimSpeedMult=6.0 -> 7.0 ptr=0x2C444BB55B0 source=cache\nScratchBot.capacity=33 -> 34 ptr=0x2C444B0C2D0 source=cache\nScratchBot.strength=20 -> 21 ptr=0x2C444B0C2D0 source=cache\nScratchBot.speedMult=16.0 -> 17.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraSpeed=0.0 -> 1.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraCapacity=0.0 -> 1.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraStrength=1 -> 2 ptr=0x2C444B0C2D0 source=cache\nSpellBook.RechargeSpeedMult=6.0 -> 7.0 ptr=0x2C440EC1690 source=cache\nOK touchedFields=14\nRESTORE true :: gadget runtime mode=apply\nEggTimer.BatteryCapacityMult=7.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.BatteryChargeMult=7.0 -> 6.0 ptr=0x2C440FD8D00 source=cache\nEggTimer.MultMultiplier=3.5 -> 2.5 ptr=0x2C440FD8D00 source=cache\nFan.BatteryCapacityMult=33.0 -> 32.0 ptr=0x2C440FCD360 source=cache\nFan.BatteryChargeMult=2.0 -> 1.0 ptr=0x2C440FCD360 source=cache\nFan.SpeedMult=4.5 -> 3.5 ptr=0x2C440FCD360 source=cache\nMundo.ClaimSpeedMult=7.0 -> 6.0 ptr=0x2C444BB55B0 source=cache\nScratchBot.capacity=34 -> 33 ptr=0x2C444B0C2D0 source=cache\nScratchBot.strength=21 -> 20 ptr=0x2C444B0C2D0 source=cache\nScratchBot.speedMult=17.0 -> 16.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraSpeed=1.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraCapacity=1.0 -> 0.0 ptr=0x2C444B0C2D0 source=cache\nScratchBot.extraStrength=2 -> 1 ptr=0x2C444B0C2D0 source=cache\nSpellBook.RechargeSpeedMult=7.0 -> 6.0 ptr=0x2C440EC1690 source=cache\nOK touchedFields=14",
       "error": ""
     },
     {
       "name": "experimental_runtime_status",
       "ok": true,
-      "duration_sec": 9.826,
+      "duration_sec": 9.473,
       "summary": "ScratchBot.processingDuration=20.0 -> 20.0 ptr=0x2C444B0C2D0 source=cache | Mundo.paused=false -> false ptr=0x2C444BB55B0 source=cache | OK touchedFields=0",
       "raw": "true :: true :: experimental runtime mode=status\nScratchBot.processingDuration=20.0 -> 20.0 ptr=0x2C444B0C2D0 source=cache\nMundo.paused=false -> false ptr=0x2C444BB55B0 source=cache\nOK touchedFields=0",
       "error": ""
@@ -139,7 +139,7 @@
     {
       "name": "experimental_runtime_dispatcher_restore",
       "ok": true,
-      "duration_sec": 16.661,
+      "duration_sec": 18.73,
       "summary": "experimental runtime restore botSource=cache mundoSource=cache duration 20 -> 20.25 -> 20 paused 0 -> 1 -> 0 changed=true restored=true | ScratchBot.processingDuration=20.0 -> 20.25 ptr=0x2C444B0C2D0 source=cache | Mundo.paused=false -> true ptr=0x2C444BB55B0 source=cache | OK touchedFields=2",
       "raw": "experimental runtime restore botSource=cache mundoSource=cache duration 20 -> 20.25 -> 20 paused 0 -> 1 -> 0 changed=true restored=true\nAPPLY true :: experimental runtime mode=apply\nScratchBot.processingDuration=20.0 -> 20.25 ptr=0x2C444B0C2D0 source=cache\nMundo.paused=false -> true ptr=0x2C444BB55B0 source=cache\nOK touchedFields=2\nRESTORE true :: experimental runtime mode=apply\nScratchBot.processingDuration=20.25 -> 20.0 ptr=0x2C444B0C2D0 source=cache\nMundo.paused=true -> false ptr=0x2C444BB55B0 source=cache\nOK touchedFields=2",
       "error": ""
@@ -147,7 +147,7 @@
     {
       "name": "helper_upgrade_status",
       "ok": true,
-      "duration_sec": 9.199,
+      "duration_sec": 14.455,
       "summary": "Fan 1 -> 1 max=1 val=0x2C46BBE48D0 | Fan Speed 5 -> 5 max=5 val=0x2C46BBE47E0 | Fan Battery 5 -> 5 max=5 val=0x2C46BBE46F0 | Mundo 1 -> 1 max=1 val=0x2C46BBE4420",
       "raw": "true :: true :: helper upgrades saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=status max_source=analysis/UpgradeData.json\nFan 1 -> 1 max=1 val=0x2C46BBE48D0\nFan Speed 5 -> 5 max=5 val=0x2C46BBE47E0\nFan Battery 5 -> 5 max=5 val=0x2C46BBE46F0\nMundo 1 -> 1 max=1 val=0x2C46BBE4420\nMundo Speed 10 -> 10 max=10 val=0x2C46BBE4330\nSpell Book 1 -> 1 max=1 val=0x2C46BBE4240\nSpell Charge Speed 10 -> 10 max=10 val=0x2C46BBE4150\nEgg Timer 1 -> 1 max=1 val=0x2C46BBE6E70\nTimer Capacity 10 -> 10 max=10 val=0x2C46BBE6D80\nTimer Charge 10 -> 10 max=10 val=0x2C46BBE6C90\nWarp Speed 3 -> 3 max=3 val=0x2C46BBE6BA0",
       "error": ""
@@ -155,7 +155,7 @@
     {
       "name": "helper_upgrade_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.053,
+      "duration_sec": 20.875,
       "summary": "upgrade restore action=helper_upgrade_apply source=mono_static Fan 1 -> 0 -> 1 | Fan Speed 5 -> 4 -> 5 | Fan Battery 5 -> 4 -> 5 | Mundo 1 -> 0 -> 1 | Mundo Speed 10 -> 9 -> 10 | Spell Book 1 -> 0 -> 1 | Spell Charge Speed 10 -> 9 -> 10 | Egg Timer 1 -> 0 -> 1 | Timer Capacity 10 -> 9 -> 10 | Timer Charge 10 -> 9 -> 10 | Warp Speed 3 -> 2 -> 3 changed=true restored=true | Fan 1 -> 0 max=1 val=0x2C46BBE48D0 | Fan Speed 5 -> 4 max=5 val=0x2C46BBE47E0 | Fan Battery 5 -> 4 max=5 val=0x2C46BBE46F0",
       "raw": "upgrade restore action=helper_upgrade_apply source=mono_static Fan 1 -> 0 -> 1 | Fan Speed 5 -> 4 -> 5 | Fan Battery 5 -> 4 -> 5 | Mundo 1 -> 0 -> 1 | Mundo Speed 10 -> 9 -> 10 | Spell Book 1 -> 0 -> 1 | Spell Charge Speed 10 -> 9 -> 10 | Egg Timer 1 -> 0 -> 1 | Timer Capacity 10 -> 9 -> 10 | Timer Charge 10 -> 9 -> 10 | Warp Speed 3 -> 2 -> 3 changed=true restored=true\nAPPLY true :: helper upgrades saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=apply max_source=analysis/UpgradeData.json\nFan 1 -> 0 max=1 val=0x2C46BBE48D0\nFan Speed 5 -> 4 max=5 val=0x2C46BBE47E0\nFan Battery 5 -> 4 max=5 val=0x2C46BBE46F0\nMundo 1 -> 0 max=1 val=0x2C46BBE4420\nMundo Speed 10 -> 9 max=10 val=0x2C46BBE4330\nSpell Book 1 -> 0 max=1 val=0x2C46BBE4240\nSpell Charge Speed 10 -> 9 max=10 val=0x2C46BBE4150\nEgg Timer 1 -> 0 max=1 val=0x2C46BBE6E70\nTimer Capacity 10 -> 9 max=10 val=0x2C46BBE6D80\nTimer Charge 10 -> 9 max=10 val=0x2C46BBE6C90\nWarp Speed 3 -> 2 max=3 val=0x2C46BBE6BA0\nRESTORE true :: helper upgrades saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D300 mode=apply max_source=analysis/UpgradeData.json\nFan 0 -> 1 max=1 val=0x2C46BBE48D0\nFan Speed 4 -> 5 max=5 val=0x2C46BBE47E0\nFan Battery 4 -> 5 max=5 val=0x2C46BBE46F0\nMundo 0 -> 1 max=1 val=0x2C46BBE4420\nMundo Speed 9 -> 10 max=10 val=0x2C46BBE4330\nSpell Book 0 -> 1 max=1 val=0x2C46BBE4240\nSpell Charge Speed 9 -> 10 max=10 val=0x2C46BBE4150\nEgg Timer 0 -> 1 max=1 val=0x2C46BBE6E70\nTimer Capacity 9 -> 10 max=10 val=0x2C46BBE6D80\nTimer Charge 9 -> 10 max=10 val=0x2C46BBE6C90\nWarp Speed 2 -> 3 max=3 val=0x2C46BBE6BA0",
       "error": ""
@@ -163,7 +163,7 @@
     {
       "name": "ticket_progress_status",
       "ok": true,
-      "duration_sec": 8.981,
+      "duration_sec": 17.573,
       "summary": "ticket progression saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D360 ticket=Lucky Cat key=0x2C44021BB40 val=0x2C46BBB9180 mode=status level 53 -> 53 xp 366690 -> 366690",
       "raw": "true :: true :: ticket progression saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D360 ticket=Lucky Cat key=0x2C44021BB40 val=0x2C46BBB9180 mode=status level 53 -> 53 xp 366690 -> 366690",
       "error": ""
@@ -171,7 +171,7 @@
     {
       "name": "ticket_progress_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.733,
+      "duration_sec": 27.566,
       "summary": "ticket progress restore ok1=true ok2=true source=cache ticket=Lucky Cat level 53 -> 54 -> 53 xp 366690 -> 366691 -> 366690 changed=true restored=true | APPLY true :: ticket progression saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D360 ticket=Lucky Cat key=0x2C44021BB40 val=0x2C46BBB9180 mode=apply level 53 -> 54 xp 366690 -> 366691 | RESTORE true :: ticket progression saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D360 ticket=Lucky Cat key=0x2C44021BB40 val=0x2C46BBB9180 mode=apply level 54 -> 53 xp 366691 -> 366690",
       "raw": "ticket progress restore ok1=true ok2=true source=cache ticket=Lucky Cat level 53 -> 54 -> 53 xp 366690 -> 366691 -> 366690 changed=true restored=true\nAPPLY true :: ticket progression saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D360 ticket=Lucky Cat key=0x2C44021BB40 val=0x2C46BBB9180 mode=apply level 53 -> 54 xp 366690 -> 366691\nRESTORE true :: ticket progression saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 dict=0x2C46BB2D360 ticket=Lucky Cat key=0x2C44021BB40 val=0x2C46BBB9180 mode=apply level 54 -> 53 xp 366691 -> 366690",
       "error": ""
@@ -179,7 +179,7 @@
     {
       "name": "helper_state_status",
       "ok": true,
-      "duration_sec": 9.207,
+      "duration_sec": 11.685,
       "summary": "electricFanChargeLeft=958.59130859375 -> 958.59130859375 | fanPaused=true -> true | eggTimerChargeLeft=0.0 -> 0.0 | mundoDead=false -> false",
       "raw": "true :: true :: helper state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 mode=status\nelectricFanChargeLeft=958.59130859375 -> 958.59130859375\nfanPaused=true -> true\neggTimerChargeLeft=0.0 -> 0.0\nmundoDead=false -> false\ntrashCanDead=true -> true",
       "error": ""
@@ -187,15 +187,15 @@
     {
       "name": "helper_state_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.956,
+      "duration_sec": 25.003,
       "summary": "helper state restore source=cache fan 958.591 -> 959.591 -> 958.591 echo=959.59130859375 paused 1 -> 0 -> 1 echo=false egg 0 -> 1 -> 0 echo=1.0 mundo 0 -> 1 -> 0 echo=true trash 1 -> 0 -> 1 echo=false changed=true restored=true | electricFanChargeLeft=958.59130859375 -> 959.59130859375 | fanPaused=true -> false | eggTimerChargeLeft=0.0 -> 1.0",
-      "raw": "helper state restore source=cache fan 958.591 -> 959.591 -> 958.591 echo=959.59130859375 paused 1 -> 0 -> 1 echo=false egg 0 -> 1 -> 0 echo=1.0 mundo 0 -> 1 -> 0 echo=true trash 1 -> 0 -> 1 echo=false changed=true restored=true\nAPPLY true :: helper state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 mode=apply\nelectricFanChargeLeft=958.59130859375 -> 959.59130859375\nfanPaused=true -> false\neggTimerChargeLeft=0.0 -> 1.0\nmundoDead=false -> true\ntrashCanDead=true -> false\nRESTORE true :: helper state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 mode=apply\nelectricFanChargeLeft=953.45434570313 -> 958.59130859375\nfanPaused=false -> true\neggTimerChargeLeft=0.0 -> 0.0\nmundoDead=true -> false\ntrashCanDead=false -> true",
+      "raw": "helper state restore source=cache fan 958.591 -> 959.591 -> 958.591 echo=959.59130859375 paused 1 -> 0 -> 1 echo=false egg 0 -> 1 -> 0 echo=1.0 mundo 0 -> 1 -> 0 echo=true trash 1 -> 0 -> 1 echo=false changed=true restored=true\nAPPLY true :: helper state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 mode=apply\nelectricFanChargeLeft=958.59130859375 -> 959.59130859375\nfanPaused=true -> false\neggTimerChargeLeft=0.0 -> 1.0\nmundoDead=false -> true\ntrashCanDead=true -> false\nRESTORE true :: helper state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 mode=apply\nelectricFanChargeLeft=948.44757080078 -> 958.59130859375\nfanPaused=false -> true\neggTimerChargeLeft=0.0 -> 0.0\nmundoDead=true -> false\ntrashCanDead=false -> true",
       "error": ""
     },
     {
       "name": "loan_status",
       "ok": true,
-      "duration_sec": 9.414,
+      "duration_sec": 15.502,
       "summary": "loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=status loanCount 7 -> 7 listSize 0 -> 0",
       "raw": "true :: true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=status loanCount 7 -> 7 listSize 0 -> 0",
       "error": ""
@@ -203,7 +203,7 @@
     {
       "name": "loan_state_dispatcher_restore",
       "ok": true,
-      "duration_sec": 15.923,
+      "duration_sec": 23.557,
       "summary": "loan state restore source=cache hasLoan=false count 7 -> 8 -> 7 size 0 -> 0 -> 0 changed=true restored=true | firstLoan index nil -> nil -> nil loanNum nil -> nil -> nil severity nil -> nil -> nil amount nil -> nil -> nil | APPLY true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=apply loanCount 7 -> 8 listSize 0 -> 0 | RESTORE true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=apply loanCount 8 -> 7 listSize 0 -> 0",
       "raw": "loan state restore source=cache hasLoan=false count 7 -> 8 -> 7 size 0 -> 0 -> 0 changed=true restored=true\nfirstLoan index nil -> nil -> nil loanNum nil -> nil -> nil severity nil -> nil -> nil amount nil -> nil -> nil\nAPPLY true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=apply loanCount 7 -> 8 listSize 0 -> 0\nRESTORE true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=apply loanCount 8 -> 7 listSize 0 -> 0",
       "error": ""
@@ -211,7 +211,7 @@
     {
       "name": "loan_clear_restore",
       "ok": true,
-      "duration_sec": 16.073,
+      "duration_sec": 24.939,
       "summary": "loan clear restore source=cache count 7 -> 0 -> 7 size 0 -> 0 -> 0 changed=true restored=true | CLEAR true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=clear loanCount 7 -> 0 listSize 0 -> 0 | RESTORE true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=apply loanCount 0 -> 7 listSize 0 -> 0",
       "raw": "loan clear restore source=cache count 7 -> 0 -> 7 size 0 -> 0 -> 0 changed=true restored=true\nCLEAR true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=clear loanCount 7 -> 0 listSize 0 -> 0\nRESTORE true :: loan state saveData=0x2C444A46700 source=cache layerOne=0x2C4386D7630 loans=0x2C46BB5CB10 items=0x2C41592D360 capacity=0 mode=apply loanCount 0 -> 7 listSize 0 -> 0",
       "error": ""
@@ -219,7 +219,7 @@
     {
       "name": "automation_perks_status",
       "ok": true,
-      "duration_sec": 9.505,
+      "duration_sec": 10.832,
       "summary": "OK changed=1 saveChanged=0 dryrun=true",
       "raw": "true :: true :: automation perks manager=0x2C440FA06C0 dict=0x2C440FA1CC0 entries=0x2C46BD12000 saveData=0x2C444A46700 saveInfo=dict=0x2C4411282A0 entries=0x2C46BB9D540 arrlen=37 mode=status dryrun=true\nFully Automated type=36 tupleItem2 10->10 perkCount 1->10 entry=29\nHandsOff type=19 not_found_existing_only\nOK changed=1 saveChanged=0 dryrun=true",
       "error": ""
@@ -227,7 +227,7 @@
     {
       "name": "single_perk_status",
       "ok": true,
-      "duration_sec": 8.831,
+      "duration_sec": 13.645,
       "summary": "single perk manager=0x2C440FA06C0 saveData=0x2C444A46700 saveSource=cache saveInfo=dict=0x2C4411282A0 entries=0x2C46BB9D540 arrlen=37 mode=status target=Muscle Memory entry=0 id=Muscle Memory type=27 tuple=0x2C46BD1CBA0 perkData=0x2C440307740 tupleItem2 10 -> 10 perkCount 1 -> 1 save 10 -> 10 changed=false",
       "raw": "true :: true :: single perk manager=0x2C440FA06C0 saveData=0x2C444A46700 saveSource=cache saveInfo=dict=0x2C4411282A0 entries=0x2C46BB9D540 arrlen=37 mode=status target=Muscle Memory entry=0 id=Muscle Memory type=27 tuple=0x2C46BD1CBA0 perkData=0x2C440307740 tupleItem2 10 -> 10 perkCount 1 -> 1 save 10 -> 10 changed=false",
       "error": ""
@@ -235,7 +235,7 @@
     {
       "name": "single_perk_restore",
       "ok": true,
-      "duration_sec": 16.602,
+      "duration_sec": 16.269,
       "summary": "single perk restore target=Muscle Memory type=27 tupleItem2 10 -> 11 -> 10 perkCount 1 -> 11 -> 1 changed=true restored=true | APPLY true :: single perk manager=0x2C440FA06C0 saveData=0x2C444A46700 saveSource=cache saveInfo=dict=0x2C4411282A0 entries=0x2C46BB9D540 arrlen=37 mode=apply target=Muscle Memory entry=0 id=Muscle Memory type=27 tuple=0x2C46BD1CBA0 perkData=0x2C440307740 tupleItem2 10 -> 11 perkCount 1 -> 11 save 10 -> 11 changed=true | RESTORE true :: single perk manager=0x2C440FA06C0 saveData=0x2C444A46700 saveSource=cache saveInfo=dict=0x2C4411282A0 entries=0x2C46BB9D540 arrlen=37 mode=apply target=Muscle Memory entry=0 id=Muscle Memory type=27 tuple=0x2C46BD1CBA0 perkData=0x2C440307740 tupleItem2 11 -> 10 perkCount 11 -> 1 save 11 -> 10 changed=true",
       "raw": "single perk restore target=Muscle Memory type=27 tupleItem2 10 -> 11 -> 10 perkCount 1 -> 11 -> 1 changed=true restored=true\nAPPLY true :: single perk manager=0x2C440FA06C0 saveData=0x2C444A46700 saveSource=cache saveInfo=dict=0x2C4411282A0 entries=0x2C46BB9D540 arrlen=37 mode=apply target=Muscle Memory entry=0 id=Muscle Memory type=27 tuple=0x2C46BD1CBA0 perkData=0x2C440307740 tupleItem2 10 -> 11 perkCount 1 -> 11 save 10 -> 11 changed=true\nRESTORE true :: single perk manager=0x2C440FA06C0 saveData=0x2C444A46700 saveSource=cache saveInfo=dict=0x2C4411282A0 entries=0x2C46BB9D540 arrlen=37 mode=apply target=Muscle Memory entry=0 id=Muscle Memory type=27 tuple=0x2C46BD1CBA0 perkData=0x2C440307740 tupleItem2 11 -> 10 perkCount 11 -> 1 save 11 -> 10 changed=true",
       "error": ""
@@ -243,7 +243,7 @@
     {
       "name": "free_dryrun",
       "ok": true,
-      "duration_sec": 9.898,
+      "duration_sec": 17.966,
       "summary": "base=0x7FFE909D0000 | pid=35148 | experimental_ticket_mult=false | mode_request=dryrun | PlayerWallet.CanAfford_ADDR=0x7FFE90E928E0 BYTES[48 83 EC 38 80 3D] | PlayerWallet.TrySubtract_ADDR=0x7FFE90E92D00 BYTES[40 53 48 83 EC 50] | ShopPanel.CalculatePrice_ADDR=0x7FFE90EC0220 BYTES[40 53 48 83] | mode=DRYRUN",
       "raw": "true :: true :: base=0x7FFE909D0000 | pid=35148 | experimental_ticket_mult=false | mode_request=dryrun | PlayerWallet.CanAfford_ADDR=0x7FFE90E928E0 BYTES[48 83 EC 38 80 3D] | PlayerWallet.TrySubtract_ADDR=0x7FFE90E92D00 BYTES[40 53 48 83 EC 50] | ShopPanel.CalculatePrice_ADDR=0x7FFE90EC0220 BYTES[40 53 48 83] | mode=DRYRUN",
       "error": ""
@@ -251,7 +251,7 @@
     {
       "name": "free_patch_restore",
       "ok": true,
-      "duration_sec": 15.365,
+      "duration_sec": 28.908,
       "summary": "free patch restore changed=true restored=true | ENABLE true :: base=0x7FFE909D0000 | pid=35148 | experimental_ticket_mult=false | mode_request=enable | PlayerWallet.CanAfford=PATCHED[B8 01 00 00 00 C3] orig=[48 83 EC 38 80 3D] | PlayerWallet.TrySubtract=PATCHED[B8 01 00 00 00 C3] orig=[40 53 48 83 EC 50] | ShopPanel.CalculatePrice=PATCHED[0F 57 C0 C3] orig=[40 53 48 83] | mode=ENABLE patched=3 | DISABLE true :: base=0x7FFE909D0000 | pid=35148 | experimental_ticket_mult=false | mode_request=disable | PlayerWallet.CanAfford=RESTORED[48 83 EC 38 80 3D] | PlayerWallet.TrySubtract=RESTORED[40 53 48 83 EC 50] | ShopPanel.CalculatePrice=RESTORED[40 53 48 83] | mode=RESTORE restored=3",
       "raw": "free patch restore changed=true restored=true\nENABLE true :: base=0x7FFE909D0000 | pid=35148 | experimental_ticket_mult=false | mode_request=enable | PlayerWallet.CanAfford=PATCHED[B8 01 00 00 00 C3] orig=[48 83 EC 38 80 3D] | PlayerWallet.TrySubtract=PATCHED[B8 01 00 00 00 C3] orig=[40 53 48 83 EC 50] | ShopPanel.CalculatePrice=PATCHED[0F 57 C0 C3] orig=[40 53 48 83] | mode=ENABLE patched=3\nDISABLE true :: base=0x7FFE909D0000 | pid=35148 | experimental_ticket_mult=false | mode_request=disable | PlayerWallet.CanAfford=RESTORED[48 83 EC 38 80 3D] | PlayerWallet.TrySubtract=RESTORED[40 53 48 83 EC 50] | ShopPanel.CalculatePrice=RESTORED[40 53 48 83] | mode=RESTORE restored=3",
       "error": ""
@@ -259,7 +259,7 @@
     {
       "name": "symbol_dump",
       "ok": true,
-      "duration_sec": 9.465,
+      "duration_sec": 13.745,
       "summary": "ticket\tsymbolId\ttype\ttypeName\tchanceCount\tchances | Lucky Cat\tFishbone\t-1\t坏符号\t7\t889,500,400,250,100,50,5 | Lucky Cat\tFish\t0\t空符号\t7\t99,389,350,400,390,200,195 | Lucky Cat\tPink Flower\t1\t小奖\t7\t10,100,200,250,400,500,200",
       "raw": "true :: true :: ticket\tsymbolId\ttype\ttypeName\tchanceCount\tchances\nLucky Cat\tFishbone\t-1\t坏符号\t7\t889,500,400,250,100,50,5\nLucky Cat\tFish\t0\t空符号\t7\t99,389,350,400,390,200,195\nLucky Cat\tPink Flower\t1\t小奖\t7\t10,100,200,250,400,500,200\nLucky Cat\tPaw Print\t1\t小奖\t7\t1,10,48,95,100,200,350\nLucky Cat\tGold Coin\t2\t大奖\t7\t1,1,2,5,10,50,250",
       "error": ""
@@ -267,7 +267,7 @@
     {
       "name": "symbol_dryrun",
       "ok": true,
-      "duration_sec": 9.931,
+      "duration_sec": 20.287,
       "summary": "Lucky Cat / Gold Coin type=2 1,1,2,5,10,50,250 -> 1,1,2,5,10,50,250 changed=7 err=nil | OK touchedSymbols=1 touchedFloats=7",
       "raw": "true :: true :: apply ticket=Lucky Cat symbol=Gold Coin type=nil value=99999 luckIndex=-1 dryrun=true\nLucky Cat / Gold Coin type=2 1,1,2,5,10,50,250 -> 1,1,2,5,10,50,250 changed=7 err=nil\nOK touchedSymbols=1 touchedFloats=7",
       "error": ""
@@ -275,7 +275,7 @@
     {
       "name": "symbol_type_dryrun",
       "ok": true,
-      "duration_sec": 8.983,
+      "duration_sec": 12.607,
       "summary": "Lucky Cat / Pink Flower type=1 10,100,200,250,400,500,200 -> 10,100,200,250,400,500,200 changed=1 err=nil | Lucky Cat / Paw Print type=1 1,10,48,95,100,200,350 -> 1,10,48,95,100,200,350 changed=1 err=nil | OK touchedSymbols=2 touchedFloats=2",
       "raw": "true :: true :: apply ticket=Lucky Cat symbol=nil type=1 value=99999 luckIndex=0 dryrun=true\nLucky Cat / Pink Flower type=1 10,100,200,250,400,500,200 -> 10,100,200,250,400,500,200 changed=1 err=nil\nLucky Cat / Paw Print type=1 1,10,48,95,100,200,350 -> 1,10,48,95,100,200,350 changed=1 err=nil\nOK touchedSymbols=2 touchedFloats=2",
       "error": ""
@@ -283,7 +283,7 @@
     {
       "name": "symbol_write_restore",
       "ok": true,
-      "duration_sec": 22.163,
+      "duration_sec": 32.726,
       "summary": "Lucky Cat / Fishbone type=-1 889,500,400,250,100,50,5 -> 890,500,400,250,100,50,5 changed=1 err=nil | OK touchedSymbols=1 touchedFloats=1 | Lucky Cat / Fishbone type=-1 890,500,400,250,100,50,5 -> 889,500,400,250,100,50,5 changed=1 err=nil | OK touchedSymbols=1 touchedFloats=1",
       "raw": "true :: true :: apply ticket=Lucky Cat symbol=Fishbone type=nil value=890 luckIndex=0 dryrun=false\nLucky Cat / Fishbone type=-1 889,500,400,250,100,50,5 -> 890,500,400,250,100,50,5 changed=1 err=nil\nOK touchedSymbols=1 touchedFloats=1\nRESTORE true :: true :: apply ticket=Lucky Cat symbol=Fishbone type=nil value=889 luckIndex=0 dryrun=false\nLucky Cat / Fishbone type=-1 890,500,400,250,100,50,5 -> 889,500,400,250,100,50,5 changed=1 err=nil\nOK touchedSymbols=1 touchedFloats=1\noriginal=889 changedValue=890 restoredValue=889 changed=true restored=true",
       "error": ""
@@ -291,7 +291,7 @@
     {
       "name": "rng_patch_restore",
       "ok": true,
-      "duration_sec": 17.88,
+      "duration_sec": 24.353,
       "summary": "rng patch restore changed=true restored=true | ENABLE true :: OK patched addr=0x7FFE90E6AAC0 orig=[48 89 4C 24 08 53] now=[33 C0 C3 90 90 90] | DISABLE true :: UNINSTALL OK restored=48 89 4C 24 08 53",
       "raw": "rng patch restore changed=true restored=true\nENABLE true :: OK patched addr=0x7FFE90E6AAC0 orig=[48 89 4C 24 08 53] now=[33 C0 C3 90 90 90]\nDISABLE true :: UNINSTALL OK restored=48 89 4C 24 08 53",
       "error": ""

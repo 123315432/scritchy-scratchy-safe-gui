@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import json
+import math
 import os
 import re
 import struct
@@ -352,6 +353,8 @@ class App(tk.Tk):
         self.fan_charge_var = tk.StringVar(value="")
         self.fan_speed_var = tk.StringVar(value="")
         self.mundo_claim_speed_var = tk.StringVar(value="")
+        self.scratchbot_capacity_runtime_var = tk.StringVar(value="")
+        self.scratchbot_strength_runtime_var = tk.StringVar(value="")
         self.scratchbot_speed_mult_var = tk.StringVar(value="")
         self.scratchbot_extra_speed_var = tk.StringVar(value="")
         self.scratchbot_extra_capacity_var = tk.StringVar(value="")
@@ -368,6 +371,7 @@ class App(tk.Tk):
         self.last_attached_pid = None
         self.busy = False
         self.keep_busy = False
+        self.ce_lock = threading.RLock()
         self.scroll_regions = []
         self._build()
         self.bind_all("<MouseWheel>", self.route_mousewheel)
@@ -608,8 +612,9 @@ class App(tk.Tk):
         gadget_fields = [
             ("计时器容量倍率", self.eggtimer_capacity_var), ("计时器充能倍率", self.eggtimer_charge_var), ("计时器收益倍率", self.eggtimer_mult_var),
             ("风扇容量倍率", self.fan_capacity_var), ("风扇充能倍率", self.fan_charge_var), ("风扇吹动速度倍率", self.fan_speed_var),
-            ("蒙多领奖速度倍率", self.mundo_claim_speed_var), ("刮刮机器人速度倍率", self.scratchbot_speed_mult_var), ("刮刮机器人额外速度", self.scratchbot_extra_speed_var),
-            ("刮刮机器人额外容量", self.scratchbot_extra_capacity_var), ("刮刮机器人额外强度", self.scratchbot_extra_strength_var), ("法术书充能倍率", self.spellbook_recharge_var),
+            ("蒙多领奖速度倍率", self.mundo_claim_speed_var), ("刮刮机器人当前容量", self.scratchbot_capacity_runtime_var), ("刮刮机器人当前强度", self.scratchbot_strength_runtime_var),
+            ("刮刮机器人速度倍率", self.scratchbot_speed_mult_var), ("刮刮机器人额外速度", self.scratchbot_extra_speed_var), ("刮刮机器人额外容量", self.scratchbot_extra_capacity_var),
+            ("刮刮机器人额外强度", self.scratchbot_extra_strength_var), ("法术书充能倍率", self.spellbook_recharge_var),
         ]
         for index, (label, var) in enumerate(gadget_fields):
             row = index // 3
@@ -833,6 +838,8 @@ class App(tk.Tk):
             number = float(value)
         except (TypeError, ValueError):
             return str(value)
+        if not math.isfinite(number):
+            return str(value)
         if number.is_integer():
             return str(int(number))
         return f"{number:g}"
@@ -872,19 +879,21 @@ class App(tk.Tk):
 
     def run_bg(self, fn):
         if self.busy:
+            self.log("已有任务在执行，等当前任务结束后再点。")
             return
+        self.busy = True
         threading.Thread(target=lambda: self._guard(fn), daemon=True).start()
 
     def _guard(self, fn):
-        self.busy = True
         try:
-            fn()
+            with self.ce_lock:
+                fn()
         except TimeoutError as exc:
             self.log(f"CE 管道忙，稍后会自动重试：{exc}")
-            self.status.set("CE 管道忙；稍后重试")
+            self.set_status("CE 管道忙；稍后重试")
         except Exception as exc:
             self.log(f"出错：{exc}")
-            self.status.set(f"出错：{exc}")
+            self.set_status(f"出错：{exc}")
         finally:
             self.busy = False
 
@@ -927,7 +936,7 @@ class App(tk.Tk):
             self.log("验证 API 不存在：" + str(VERIFY_API))
             return
         self.client.close()
-        self.log("开始安全验证；默认使用写入后恢复，不污染现场值。")
+        self.log("开始安全验证；默认写入后恢复。验证期间 GUI 会暂停其它 CE 操作，避免抢管道。")
         proc = subprocess.run(
             [sys.executable, str(VERIFY_API), "--shared-client", "--wait-ready", "120", "--report", str(VERIFY_REPORT)],
             cwd=str(ROOT_DIR),
@@ -982,7 +991,7 @@ class App(tk.Tk):
 
     def wait_and_attach_game(self, timeout_sec=90):
         deadline = time.time() + timeout_sec
-        self.status.set("等待游戏进程")
+        self.set_status("等待游戏进程")
         while time.time() < deadline:
             try:
                 pid = self.find_game_pid()
@@ -993,7 +1002,7 @@ class App(tk.Tk):
             except Exception as exc:
                 self.log(f"等待游戏时暂时失败：{exc}")
             time.sleep(1.0)
-        self.status.set("等待游戏超时")
+        self.set_status("等待游戏超时")
         self.log(f"等待游戏超时：{timeout_sec}s")
         return False
 
@@ -1061,8 +1070,24 @@ class App(tk.Tk):
         value = text.strip()
         if not value:
             return "nil"
-        float(value)
-        return value
+        number = float(value)
+        if not math.isfinite(number):
+            raise ValueError("数字必须是有限值，不支持 NaN/Inf。")
+        return f"{number:.15g}"
+
+    @staticmethod
+    def finite_number(text: str, label: str = "数值") -> float:
+        value = text.strip()
+        if not value:
+            raise ValueError(f"{label}不能为空")
+        number = float(value)
+        if not math.isfinite(number):
+            raise ValueError(f"{label}必须是有限值，不支持 NaN/Inf。")
+        return number
+
+    @classmethod
+    def finite_int(cls, text: str, label: str = "整数") -> int:
+        return int(cls.finite_number(text, label))
 
     def run_custom_save_fields(self, only: str | None = None):
         target = {"money": "金钱", "tokens": "代币"}.get(only, "全部填写项")
@@ -1109,8 +1134,8 @@ class App(tk.Tk):
         self.ensure_connected()
         if self.auto_attach_enabled.get():
             self.attach_game()
-        level = int(float(self.unlock_level_var.get().strip()))
-        xp = int(float(self.unlock_xp_var.get().strip()))
+        level = self.finite_int(self.unlock_level_var.get().strip(), "票等级")
+        xp = self.finite_int(self.unlock_xp_var.get().strip(), "票经验")
         extra = f"SCRITCHY_UNLOCK_LEVEL={level}\nSCRITCHY_UNLOCK_XP={xp}"
         self.log(f"按自定义等级/经验解锁全部票：level={level} xp={xp}")
         res = self.client.lua(self.suite_code("online_unlock", extra))
@@ -1449,13 +1474,13 @@ class App(tk.Tk):
         if not text:
             self.log("SJP 权重为空：不写入。")
             return
-        value = float(text)
+        value = self.finite_number(text, "SJP 权重")
         extra = f"SJP_CHANCE_VALUE={value}"
         self.log(f"应用 SJP 权重：{value}")
         res = self.client.lua(self.suite_code("sjp_max", extra))
         self.log(self.clean_result(res, "sjp_max"))
         if self.result_ok(res):
-            self.keep_sjp_enabled.set(True)
+            self.log("SJP 权重已应用；需要周期重写时再手动勾选“自动重应用运行时项 / SJP 权重”。")
         self.refresh_status_once()
 
     def run_symbol_apply(self, dryrun: bool = False):
@@ -1473,21 +1498,29 @@ class App(tk.Tk):
         if not weight_text:
             self.log("目标权重为空：不写入。")
             return
-        weight = float(weight_text)
+        weight = self.finite_number(weight_text, "符号权重")
         mode = "预览几率" if dryrun else "应用几率"
         self.log(f"{mode}：票={self.ticket_var.get()} / {ticket_id} 符号={self.display_symbol(symbol) if symbol else self.symbol_type_var.get()} 权重={weight}")
         res = self.client.lua(self.suite_code("symbol_apply", self.build_symbol_extra(dryrun)))
         self.log(self.clean_result(res, "symbol_apply"))
         if not dryrun and self.result_ok(res):
-            self.keep_symbol_enabled.set(True)
+            self.log("符号权重已应用；需要周期重写时再手动勾选“自动重应用运行时项 / 当前符号几率”。")
 
     def refresh_status_once(self):
         res = self.client.lua("local pid=getOpenedProcessID(); return '已连接，游戏 PID='..tostring(pid)")
         text = res.get("result") if isinstance(res, dict) else str(res)
-        self.status.set(text or "已连接")
+        self.set_status(text or "已连接")
 
     def refresh_status(self):
+        if self.busy or self.keep_busy:
+            self.after(4000, self.refresh_status)
+            return
         def worker():
+            acquired = self.ce_lock.acquire(blocking=False)
+            if not acquired:
+                self.set_status("CE 正在执行其它任务；后台状态下轮再试")
+                self.after(4000, self.refresh_status)
+                return
             try:
                 self.ensure_connected()
                 pid = self.find_game_pid()
@@ -1496,12 +1529,13 @@ class App(tk.Tk):
                 elif pid:
                     self.refresh_status_once()
                 else:
-                    self.status.set("CE 已连接；等待游戏启动")
+                    self.set_status("CE 已连接；等待游戏启动")
             except TimeoutError:
-                self.status.set("CE 管道忙；后台状态下轮再试")
+                self.set_status("CE 管道忙；后台状态下轮再试")
             except Exception:
-                self.status.set("未连接 CE；可点一键准备")
+                self.set_status("未连接 CE；可点一键准备")
             finally:
+                self.ce_lock.release()
                 self.after(4000, self.refresh_status)
         threading.Thread(target=worker, daemon=True).start()
 
@@ -1512,7 +1546,12 @@ class App(tk.Tk):
 
     def _keep_values_worker(self):
         self.keep_busy = True
+        acquired = False
         try:
+            acquired = self.ce_lock.acquire(blocking=False)
+            if not acquired:
+                self.set_status("CE 正在执行其它任务；跳过本轮自动重应用")
+                return
             self.ensure_connected()
             pid = self.find_game_pid()
             if not pid:
@@ -1559,6 +1598,8 @@ class App(tk.Tk):
         except Exception as exc:
             self.set_status(f"保持失败：{exc}")
         finally:
+            if acquired:
+                self.ce_lock.release()
             self.keep_busy = False
 
     def current_ticket_id(self) -> str:
@@ -1611,11 +1652,11 @@ class App(tk.Tk):
         if not self.result_ok(res):
             return
         if action_key == "free_enable":
-            self.keep_free_enabled.set(True)
+            self.log("免费购买已启用；需要周期重写时再手动勾选“免费购买补丁”。")
         elif action_key == "free_disable":
             self.keep_free_enabled.set(False)
         elif action_key == "rng_enable":
-            self.keep_rng_enabled.set(True)
+            self.log("固定 RNG 已启用；需要周期重写时再手动勾选“固定 RNG 补丁”。")
         elif action_key == "rng_disable":
             self.keep_rng_enabled.set(False)
 
@@ -1626,8 +1667,8 @@ class App(tk.Tk):
         weight_text = self.weight_var.get().strip()
         if not weight_text:
             raise ValueError("目标权重为空")
-        weight = float(weight_text)
-        luck_index = int(self.luck_index_var.get().strip())
+        weight = self.finite_number(weight_text, "符号权重")
+        luck_index = self.finite_int(self.luck_index_var.get().strip(), "幸运等级索引")
         extra_lines = [
             f"SCRITCHY_SYMBOL_TICKET={self.lua_quote(ticket_id)}",
             f"SCRITCHY_SYMBOL_VALUE={weight}",
@@ -1723,6 +1764,8 @@ class App(tk.Tk):
             f"SCRITCHY_FAN_BATTERY_CHARGE_MULT={self.lua_number_or_nil(self.fan_charge_var.get())}",
             f"SCRITCHY_FAN_SPEED_MULT={self.lua_number_or_nil(self.fan_speed_var.get())}",
             f"SCRITCHY_MUNDO_CLAIM_SPEED_MULT={self.lua_number_or_nil(self.mundo_claim_speed_var.get())}",
+            f"SCRITCHY_SCRATCHBOT_CAPACITY={self.lua_number_or_nil(self.scratchbot_capacity_runtime_var.get())}",
+            f"SCRITCHY_SCRATCHBOT_STRENGTH={self.lua_number_or_nil(self.scratchbot_strength_runtime_var.get())}",
             f"SCRITCHY_SCRATCHBOT_SPEED_MULT={self.lua_number_or_nil(self.scratchbot_speed_mult_var.get())}",
             f"SCRITCHY_SCRATCHBOT_EXTRA_SPEED={self.lua_number_or_nil(self.scratchbot_extra_speed_var.get())}",
             f"SCRITCHY_SCRATCHBOT_EXTRA_CAPACITY={self.lua_number_or_nil(self.scratchbot_extra_capacity_var.get())}",

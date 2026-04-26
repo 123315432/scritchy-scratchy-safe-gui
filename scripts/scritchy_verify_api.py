@@ -619,6 +619,8 @@ def gadget_runtime_dispatcher_restore_lua() -> str:
         ("Fan", "BatteryChargeMult", "SCRITCHY_FAN_BATTERY_CHARGE_MULT", 0x6C, "float", 0.01, 100000),
         ("Fan", "SpeedMult", "SCRITCHY_FAN_SPEED_MULT", 0x70, "float", 0.01, 100000),
         ("Mundo", "ClaimSpeedMult", "SCRITCHY_MUNDO_CLAIM_SPEED_MULT", 0xB8, "float", 0.01, 100000),
+        ("ScratchBot", "capacity", "SCRITCHY_SCRATCHBOT_CAPACITY", 0xC4, "int", 0, 100000),
+        ("ScratchBot", "strength", "SCRITCHY_SCRATCHBOT_STRENGTH", 0xC8, "int", 0, 100000),
         ("ScratchBot", "speedMult", "SCRITCHY_SCRATCHBOT_SPEED_MULT", 0xCC, "float", 0.01, 100000),
         ("ScratchBot", "extraSpeed", "SCRITCHY_SCRATCHBOT_EXTRA_SPEED", 0xD0, "float", 0.0, 100000),
         ("ScratchBot", "extraCapacity", "SCRITCHY_SCRATCHBOT_EXTRA_CAPACITY", 0xD4, "float", 0.0, 100000),

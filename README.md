@@ -22,9 +22,9 @@ powershell -ExecutionPolicy Bypass -File .\start_scritchy_safe_gui.ps1
 
 ## 已验证功能
 
-当前安全验证报告：`analysis/gui_safe_verify_report.json`，最近一次默认矩阵结果为 `36/36` 通过。
+当前安全验证报告：`analysis/gui_safe_verify_report.json`，2026-04-26 最近一次默认矩阵结果为 `36/36` 通过。
 
-发布版 GUI 默认尽量留空输入框，避免误点后直接写大额金钱、清空贷款或拉满权重。需要改值时先点读取当前状态，再手动填写目标值。
+发布版 GUI 默认尽量留空输入框，避免误点后直接写大额金钱、清空贷款或拉满权重。需要改值时先点读取当前状态，再手动填写目标值；所有数值输入会拒绝 `NaN` / `Inf` 这类非有限数。
 
 ### 功能覆盖表
 
@@ -41,6 +41,7 @@ powershell -ExecutionPolicy Bypass -File .\start_scritchy_safe_gui.ps1
 | 贷款清理 | 已验证 | `loan_state_dispatcher_restore` | 覆盖 `SaveData.loanCount`、`LayerOne.loans` 列表长度和已有 `LoanGroup.Save` 字段；不新增对象。 |
 | 辅助状态救援 | 已验证 | `helper_state_dispatcher_restore` | 覆盖电扇/计时器充能、风扇暂停、蒙多/垃圾桶死亡标记。 |
 | 辅助道具运行时倍率 | 已验证 | `gadget_runtime_dispatcher_restore` | 覆盖煮蛋计时器、风扇、蒙多、刮刮机器人、法术书倍率字段，默认写后恢复。 |
+| 刮刮机器人基础运行时 | 已验证 | `gadget_runtime_dispatcher_restore` | 覆盖 `ScratchBot.capacity +0xC4`、`strength +0xC8`，以及速度/额外容量/额外强度字段；写后恢复。 |
 | 实验运行时字段 | 已验证恢复 | `experimental_runtime_dispatcher_restore` | 覆盖 `ScratchBot.processingDuration` 和 `Mundo.paused`，只改当前进程，不进自动重应用。 |
 | 单个已有能力编辑 | 已验证 | `single_perk_restore` | 只改已有 `activePerks` / `boughtPrestigeUpgrades` 条目；不新增能力，不调用 `ActivatePerk`。 |
 | 自动化能力 | 已验证只读 | `automation_perks_status` | 只读取/处理已有 `Fully Automated` / `HandsOff` 条目，不伪造对象。 |
@@ -63,7 +64,7 @@ powershell -ExecutionPolicy Bypass -File .\start_scritchy_safe_gui.ps1
 - 单票进度写入恢复：选中刮刮卡的等级、经验先写测试值，再恢复原值。
 - 贷款字段写入恢复：贷款计数、贷款列表长度、第一条贷款字段先写测试值，再恢复原值。
 - 辅助状态救援写入恢复：电扇/计时器充能、风扇暂停、蒙多/垃圾桶死亡标记先写测试值，再恢复原值。
-- 辅助道具运行时写入恢复：煮蛋计时器、风扇、蒙多、刮刮机器人、法术书倍率按当前值回滚。
+- 辅助道具运行时写入恢复：煮蛋计时器、风扇、蒙多、刮刮机器人、法术书倍率按当前值回滚；其中 `ScratchBot.capacity`、`ScratchBot.strength` 也会写测试值后恢复。
 - 实验运行时写入恢复：刮刮机器人处理时长、蒙多运行时暂停标记先写测试值，再恢复原值。
 - 单个已有能力写入恢复：选定已有能力的运行时 tuple、PerkData.count、存档字典值先写测试值，再恢复原值。
 - 自动化能力状态读取：只处理已有 `Fully Automated` / `HandsOff` 条目，不伪造对象。
@@ -82,8 +83,9 @@ powershell -ExecutionPolicy Bypass -File .\start_scritchy_safe_gui.ps1
 下面是已静态定位、但还没有纳入默认 GUI/验证矩阵的候选。发版时不要把它们写成“已验证”。
 
 - `UnityEngine.Time.timeScale`：全局倍速，风险高，应放实验区并单独恢复验证。
-- `TheMachine.processingDuration +0x20` / `machineProcessingTimeLeft +0x84`：机器处理链路已静态定位，尚未纳入默认写入矩阵。
-- `MachineTierData.bonusIncome +0x20`：收益倍率数据已静态定位，尚未纳入默认写入矩阵。
+- `PrestigeLayerOneData.machineProcessingTimeLeft +0x84`：低风险候选，指向 `SaveData.layerOne +0x84`，但属于机器流程倒计时/存档字段，尚未纳入默认写入矩阵。
+- `TheMachine.processingDuration +0x20`：实验运行时候选，实例生命周期跟场景相关，尚未纳入默认写入矩阵。
+- `MachineTierData.bonusIncome +0x20`：收益倍率数据已静态定位，但 live tier 对象归属和恢复目标尚未验证，暂不写入。
 
 ## 符号概率
 
@@ -128,4 +130,6 @@ python .\scripts\scritchy_verify_api.py --shared-client --wait-ready 120 --case 
 
 重启游戏后必须重新定位运行时对象。`scritchy_safe_suite.lua` 会按 `getOpenedProcessID()` 检测 PID 变化并清理 `SCRITCHY_CACHED_*`，不要把上一次进程里的指针地址当成稳定地址写进文档或配置。
 
-GUI 的自动重应用只默认覆盖运行时参数；持久存档项需要额外勾选，实验运行时不进自动重应用循环。自动重应用失败会在日志里按 action 输出失败项。
+GUI 的 CE 交互现在走单个界面锁：手动动作、后台状态刷新、安全验证、自动重应用不会同时抢 `\\.\pipe\CE_MCP_Bridge_v99`。安全验证期间不要点其它动作；GUI 会暂停其它 CE 操作并在日志里输出简要进度。
+
+GUI 的自动重应用只默认覆盖运行时参数；持久存档项需要额外勾选，实验运行时不进自动重应用循环。SJP 权重、符号权重、免费购买补丁、固定 RNG 补丁不会因为手动应用成功就自动勾选重应用，必须显式勾选对应子项。自动重应用失败会在日志里按 action 输出失败项。

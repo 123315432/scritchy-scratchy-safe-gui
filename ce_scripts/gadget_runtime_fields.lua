@@ -82,6 +82,8 @@ fieldFloat('Fan', 'BatteryCapacityMult', 0x68, SCRITCHY_FAN_BATTERY_CAPACITY_MUL
 fieldFloat('Fan', 'BatteryChargeMult', 0x6C, SCRITCHY_FAN_BATTERY_CHARGE_MULT, 0.01, 100000)
 fieldFloat('Fan', 'SpeedMult', 0x70, SCRITCHY_FAN_SPEED_MULT, 0.01, 100000)
 fieldFloat('Mundo', 'ClaimSpeedMult', 0xB8, SCRITCHY_MUNDO_CLAIM_SPEED_MULT, 0.01, 100000)
+fieldInt('ScratchBot', 'capacity', 0xC4, SCRITCHY_SCRATCHBOT_CAPACITY, 0, 100000)
+fieldInt('ScratchBot', 'strength', 0xC8, SCRITCHY_SCRATCHBOT_STRENGTH, 0, 100000)
 fieldFloat('ScratchBot', 'speedMult', 0xCC, SCRITCHY_SCRATCHBOT_SPEED_MULT, 0.01, 100000)
 fieldFloat('ScratchBot', 'extraSpeed', 0xD0, SCRITCHY_SCRATCHBOT_EXTRA_SPEED, 0.0, 100000)
 fieldFloat('ScratchBot', 'extraCapacity', 0xD4, SCRITCHY_SCRATCHBOT_EXTRA_CAPACITY, 0.0, 100000)
