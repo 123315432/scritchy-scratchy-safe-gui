@@ -1,0 +1,151 @@
+[ENABLE]
+
+// dump version lock:
+//   Ticket.get_IsSuperJackpot   = GameAssembly.dll+4E9590
+//   Ticket.HasSuperJackpot      = GameAssembly.dll+4E77E0
+//   Ticket.IsSuperJackpotTicket = GameAssembly.dll+4E7AA0
+// 说明：PerkManager.TryGetSuperJackpotChanceChance 静态上是 SJP chance 入口，
+// 但历史活体结果表明单 patch 该函数并不能稳定触发生产链。
+// 这里改为 patch 生产期真正消费的 Ticket SJP 判断，并且只对 Lucky Cat 生效。
+
+define(Ticket_get_IsSuperJackpot,GameAssembly.dll+4E9590)
+define(Ticket_HasSuperJackpot,GameAssembly.dll+4E77E0)
+define(Ticket_IsSuperJackpotTicket,GameAssembly.dll+4E7AA0)
+
+assert(Ticket_get_IsSuperJackpot,40 53 48 83 EC 20)
+assert(Ticket_HasSuperJackpot,48 89 5C 24 08 57)
+assert(Ticket_IsSuperJackpotTicket,40 53 48 83 EC 20)
+
+alloc(newmem_get,256,Ticket_get_IsSuperJackpot)
+alloc(newmem_has,256,Ticket_HasSuperJackpot)
+alloc(newmem_id,256,Ticket_IsSuperJackpotTicket)
+
+label(orig_get)
+label(orig_has)
+label(orig_id)
+
+newmem_get:
+  mov rax,[rcx+0C8]
+  test rax,rax
+  je orig_get
+  mov rax,[rax+10]
+  test rax,rax
+  je orig_get
+  cmp dword ptr [rax+10],09
+  jne orig_get
+  cmp word ptr [rax+14],004C
+  jne orig_get
+  cmp word ptr [rax+16],0075
+  jne orig_get
+  cmp word ptr [rax+18],0063
+  jne orig_get
+  cmp word ptr [rax+1A],006B
+  jne orig_get
+  cmp word ptr [rax+1C],0079
+  jne orig_get
+  cmp word ptr [rax+1E],0020
+  jne orig_get
+  cmp word ptr [rax+20],0043
+  jne orig_get
+  cmp word ptr [rax+22],0061
+  jne orig_get
+  cmp word ptr [rax+24],0074
+  jne orig_get
+  mov al,01
+  ret
+orig_get:
+  push rbx
+  sub rsp,20
+  jmp Ticket_get_IsSuperJackpot+6
+
+newmem_has:
+  mov rax,[rcx+0C8]
+  test rax,rax
+  je orig_has
+  mov rax,[rax+10]
+  test rax,rax
+  je orig_has
+  cmp dword ptr [rax+10],09
+  jne orig_has
+  cmp word ptr [rax+14],004C
+  jne orig_has
+  cmp word ptr [rax+16],0075
+  jne orig_has
+  cmp word ptr [rax+18],0063
+  jne orig_has
+  cmp word ptr [rax+1A],006B
+  jne orig_has
+  cmp word ptr [rax+1C],0079
+  jne orig_has
+  cmp word ptr [rax+1E],0020
+  jne orig_has
+  cmp word ptr [rax+20],0043
+  jne orig_has
+  cmp word ptr [rax+22],0061
+  jne orig_has
+  cmp word ptr [rax+24],0074
+  jne orig_has
+  mov al,01
+  ret
+orig_has:
+  mov [rsp+08],rbx
+  push rdi
+  jmp Ticket_HasSuperJackpot+6
+
+newmem_id:
+  mov rax,rcx
+  test rax,rax
+  je orig_id
+  cmp dword ptr [rax+10],09
+  jne orig_id
+  cmp word ptr [rax+14],004C
+  jne orig_id
+  cmp word ptr [rax+16],0075
+  jne orig_id
+  cmp word ptr [rax+18],0063
+  jne orig_id
+  cmp word ptr [rax+1A],006B
+  jne orig_id
+  cmp word ptr [rax+1C],0079
+  jne orig_id
+  cmp word ptr [rax+1E],0020
+  jne orig_id
+  cmp word ptr [rax+20],0043
+  jne orig_id
+  cmp word ptr [rax+22],0061
+  jne orig_id
+  cmp word ptr [rax+24],0074
+  jne orig_id
+  mov al,01
+  ret
+orig_id:
+  push rbx
+  sub rsp,20
+  jmp Ticket_IsSuperJackpotTicket+6
+
+Ticket_get_IsSuperJackpot:
+  jmp newmem_get
+  nop
+
+Ticket_HasSuperJackpot:
+  jmp newmem_has
+  nop
+
+Ticket_IsSuperJackpotTicket:
+  jmp newmem_id
+  nop
+
+[DISABLE]
+
+Ticket_get_IsSuperJackpot:
+  db 40 53 48 83 EC 20
+
+Ticket_HasSuperJackpot:
+  db 48 89 5C 24 08 57
+
+Ticket_IsSuperJackpotTicket:
+  db 40 53 48 83 EC 20
+
+dealloc(newmem_get)
+dealloc(newmem_has)
+dealloc(newmem_id)

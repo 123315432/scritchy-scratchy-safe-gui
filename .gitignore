@@ -1,0 +1,42 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+*.log
+*.tmp
+temp_*
+cdx_*.json
+cdx_prompts/
+AGENTS.md
+
+# local screenshots / private chat exports
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+
+# local reverse/build artifacts
+Cpp2IL/
+Il2CppDumper/
+Il2CppDumper_prebuilt/
+prebuilt/
+downloads/
+dump_cpp2il/
+dump_il2cppdumper/
+_readonly_loc_extract/
+ce_analysis/
+
+# keep small runtime cache files in analysis, ignore bulky/private outputs by default
+analysis/*
+!analysis/TicketData.json
+!analysis/SymbolData.json
+!analysis/localization_zh_map.json
+!analysis/UpgradeData.json
+!analysis/gui_function_verify_report.json
+!analysis/gui_safe_verify_report.json
+!analysis/steam_launch_and_ready_notes_2026-04-25.md
+!analysis/ticket_symbol_chance_control_2026-04-25.md
+!analysis/gui_validation_2026-04-25.md
+!analysis/gui_integration_2026-04-25.md
+!analysis/progress_index_2026-04-25.md

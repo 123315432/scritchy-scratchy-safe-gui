@@ -1,0 +1,18 @@
+[ENABLE]
+aobscanmodule(Ticket_get_IsSuperJackpot_AOB,GameAssembly.dll,40 53 48 83 EC 20 80 3D ?? ?? ?? ?? 00 48 8B D9 75 13 48 8D 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? C6 05 ?? ?? ?? ?? 01 48 8B 83 C8 00 00 00 48 85 C0 74 51)
+alloc(newmem,64,Ticket_get_IsSuperJackpot_AOB)
+label(return)
+newmem:
+  mov al,01
+  ret
+Ticket_get_IsSuperJackpot_AOB:
+  jmp newmem
+  nop
+return:
+registersymbol(Ticket_get_IsSuperJackpot_AOB)
+
+[DISABLE]
+Ticket_get_IsSuperJackpot_AOB:
+  db 40 53 48 83 EC 20
+unregistersymbol(Ticket_get_IsSuperJackpot_AOB)
+dealloc(newmem)

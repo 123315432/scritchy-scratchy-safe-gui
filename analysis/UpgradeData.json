@@ -1,0 +1,392 @@
+{
+  "The Machine": {
+    "id": "The Machine",
+    "upgradeCount": 1,
+    "basePrice": 1000.0,
+    "priceIncrease": 1.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Scratch Luck": {
+    "id": "Scratch Luck",
+    "upgradeCount": 45,
+    "basePrice": 200.0,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Base Coin": {
+    "id": "Scratch Size_Base Coin",
+    "upgradeCount": 2,
+    "basePrice": 25.0,
+    "priceIncrease": 8.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Tin Coin": {
+    "id": "Tin Coin",
+    "upgradeCount": 1,
+    "basePrice": 1000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Tin Coin": {
+    "id": "Scratch Size_Tin Coin",
+    "upgradeCount": 2,
+    "basePrice": 5000.0,
+    "priceIncrease": 4.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Aluminum Coin": {
+    "id": "Aluminum Coin",
+    "upgradeCount": 1,
+    "basePrice": 200000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Aluminum Coin": {
+    "id": "Scratch Size_Aluminum Coin",
+    "upgradeCount": 2,
+    "basePrice": 1000000.0,
+    "priceIncrease": 4.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Copper Coin": {
+    "id": "Copper Coin",
+    "upgradeCount": 1,
+    "basePrice": 100000000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Copper Coin": {
+    "id": "Scratch Size_Copper Coin",
+    "upgradeCount": 2,
+    "basePrice": 500000000.0,
+    "priceIncrease": 4.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Bronze Coin": {
+    "id": "Bronze Coin",
+    "upgradeCount": 1,
+    "basePrice": 50000000000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Bronze Coin": {
+    "id": "Scratch Size_Bronze Coin",
+    "upgradeCount": 2,
+    "basePrice": 500000000000.0,
+    "priceIncrease": 4.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Iron Coin": {
+    "id": "Iron Coin",
+    "upgradeCount": 1,
+    "basePrice": 500000000000000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Iron Coin": {
+    "id": "Scratch Size_Iron Coin",
+    "upgradeCount": 2,
+    "basePrice": 1e+16,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Steel Coin": {
+    "id": "Steel Coin",
+    "upgradeCount": 1,
+    "basePrice": 5e+19,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Steel Coin": {
+    "id": "Scratch Size_Steel Coin",
+    "upgradeCount": 2,
+    "basePrice": 1e+20,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Titanium Coin": {
+    "id": "Titanium Coin",
+    "upgradeCount": 1,
+    "basePrice": 1e+23,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Titanium Coin": {
+    "id": "Scratch Size_Titanium Coin",
+    "upgradeCount": 2,
+    "basePrice": 5e+23,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Tungsten Coin": {
+    "id": "Tungsten Coin",
+    "upgradeCount": 1,
+    "basePrice": 1e+27,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 2.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Scratch Size_Tungsten Coin": {
+    "id": "Scratch Size_Tungsten Coin",
+    "upgradeCount": 2,
+    "basePrice": 1e+28,
+    "priceIncrease": 10.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 1,
+    "OnValueModified": null
+  },
+  "Trash Can": {
+    "id": "Trash Can",
+    "upgradeCount": 1,
+    "basePrice": 2.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Scratch Bot": {
+    "id": "Scratch Bot",
+    "upgradeCount": 1,
+    "basePrice": 1000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Scratch Bot Speed": {
+    "id": "Scratch Bot Speed",
+    "upgradeCount": 30,
+    "basePrice": 5000.0,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Scratch Bot Capacity": {
+    "id": "Scratch Bot Capacity",
+    "upgradeCount": 10,
+    "basePrice": 2500.0,
+    "priceIncrease": 10.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 3.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Scratch Bot Strength": {
+    "id": "Scratch Bot Strength",
+    "upgradeCount": 20,
+    "basePrice": 2000.0,
+    "priceIncrease": 20.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Fan": {
+    "id": "Fan",
+    "upgradeCount": 1,
+    "basePrice": 50000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Fan Speed": {
+    "id": "Fan Speed",
+    "upgradeCount": 5,
+    "basePrice": 250000.0,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Fan Battery": {
+    "id": "Fan Battery",
+    "upgradeCount": 5,
+    "basePrice": 100000.0,
+    "priceIncrease": 4.0,
+    "valueIncreaseOperator": 1,
+    "valueIncrease": 2.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Sticky Mat": {
+    "id": "Sticky Mat",
+    "upgradeCount": 1,
+    "basePrice": 50000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Badge Collection": {
+    "id": "Badge Collection",
+    "upgradeCount": 1,
+    "basePrice": 50000000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Mundo": {
+    "id": "Mundo",
+    "upgradeCount": 1,
+    "basePrice": 2000000000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Mundo Speed": {
+    "id": "Mundo Speed",
+    "upgradeCount": 10,
+    "basePrice": 10000000000.0,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Spell Book": {
+    "id": "Spell Book",
+    "upgradeCount": 1,
+    "basePrice": 1000000000000000.0,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Spell Charge Speed": {
+    "id": "Spell Charge Speed",
+    "upgradeCount": 10,
+    "basePrice": 1e+16,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Subscription Bot": {
+    "id": "Subscription Bot",
+    "upgradeCount": 1,
+    "basePrice": 1e+17,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Buying Speed": {
+    "id": "Buying Speed",
+    "upgradeCount": 10,
+    "basePrice": 1e+18,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Egg Timer": {
+    "id": "Egg Timer",
+    "upgradeCount": 1,
+    "basePrice": 1e+24,
+    "priceIncrease": 0.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 1.0,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Timer Capacity": {
+    "id": "Timer Capacity",
+    "upgradeCount": 10,
+    "basePrice": 4.999999999999999e+24,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Timer Charge": {
+    "id": "Timer Charge",
+    "upgradeCount": 10,
+    "basePrice": 9.999999999999999e+24,
+    "priceIncrease": 5.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  },
+  "Warp Speed": {
+    "id": "Warp Speed",
+    "upgradeCount": 3,
+    "basePrice": 1e+27,
+    "priceIncrease": 1000.0,
+    "valueIncreaseOperator": 2,
+    "valueIncrease": 0.5,
+    "panelIndex": 0,
+    "OnValueModified": null
+  }
+}
